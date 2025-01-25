@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sthefane Soares - Star Wars CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: radial-gradient(circle, #000 70%, #111);
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            animation: fly 5s linear infinite;
+        }
+        @keyframes fly {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(calc(100vh + 10px)) translateX(calc(100vw - 50px));
+            }
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-top: 30px;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #f1f1f1;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: #ffcc00;
+        }
+        header h2 {
+            font-size: 1.5rem;
+            color: #f1f1f1;
+            font-weight: 400;
+        }
+        section {
+            margin: 40px 0;
+        }
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffcc00;
+            display: inline-block;
+            color: #ffcc00;
+        }
+        .skills, .experience, .education {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li, .experience li, .education li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #000;
+            border-top: 2px solid #ffcc00;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const starContainer = document.querySelector('.stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                starContainer.appendChild(star);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="stars"></div>
+    <header>
+        <img src="10239823-B767-4282-9BE9-0770345AE5C7.jpg" alt="Sthefane Camilo">
+        <h1>Sthefane Soares</h1>
+        <h2>Tech Professional | Agile Enthusiast</h2>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Tech professional with over 9 years of experience in web solutions, technical support, and API integration. Passionate about creating impactful digital experiences and collaborating with global teams.</p>
+        </section>
+
+        <section>
+            <h2>Core Skills</h2>
+            <ul class="skills">
+                <li>Technical Support and Customer Service</li>
+                <li>WordPress Development and Customization</li>
+                <li>API Integration and Automation</li>
+                <li>Web and Mobile Development</li>
+                <li>Agile Methodologies: Scrum, Kanban</li>
+                <li>Languages: Portuguese (native), English</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            <ul class="experience">
+                <li><strong>Freelancer</strong> - WordPress Development and Support (2020 - Present)</li>
+                <li><strong>Scrum Master</strong> - Qintess (2022 - Present)</li>
+                <li><strong>Technical Instructor</strong> - Udemy (2017 - Present)</li>
+                <li><strong>Development Lead</strong> - Banese Card (2019 - 2022)</li>
+                <li><strong>Mobile and Full Stack Developer</strong> - FortBit and FortPay (2018 - 2019)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <ul class="education">
+                <li>Postgraduate Degree in Informatics in Education - Instituto Cotemar (2017 - 2018)</li>
+                <li>Technology in Systems Analysis and Development - UNOPAR (2013 - 2016)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul class="education">
+                <li>Professional Scrum Master I and II</li>
+                <li>Professional Scrum Product Owner I</li>
+                <li>Test-Driven Development (TDD)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sthecoin.b@gmail.com">sthecoin.b@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sthefane-soares-49237985">Sthefane Soares</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>May the Force be with you!</p>
+    </footer>
+</body>
+</html>
